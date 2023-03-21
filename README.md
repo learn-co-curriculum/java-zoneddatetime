@@ -109,7 +109,7 @@ methods. Consider the table of methods below:
 | getNano()                            | Gets the nanosecond field                                                                  |
 | getSecond()                          | Gets the second of the minute                                                              |
 | getYear()                            | Gets the year field                                                                        |
-| getZone()                            | Gets the timezone, such as 'EuropeParis'                                                   |
+| getZone()                            | Gets the timezone, such as 'Europe/Paris'                                                  |
 | minusDays(long daysToSubtract)       | Returns a copy of this `ZonedDateTime` with the specified number of days subtracted        |
 | minusHours(long hoursToSubtract)     | Returns a copy of this `ZonedDateTime` with the specified number of hours subtracted       |
 | minusMinutes(long minutesToSubtract) | Returns a copy of this `ZonedDateTime` with the specified number of minutes subtracted     |
@@ -209,6 +209,19 @@ object:
 1955-11-05T06:15-08:00[America/Los_Angeles]
 1955-11-05T06:15-08:00[America/Los_Angeles]
 ```
+
+## Use Cases
+
+`ZonedDateTime` is an incredibly useful class when it comes to caring about
+timezones. As we know, timezones are all over the world, and sometimes it is
+necessary to include them in our code! Consider the following use cases:
+
+- Needing to display a current date-time to a user who might not live in your
+  time zone.
+- Creating an application for the military when they are abroad on missions and
+  need to know the exact timestamp of a message in the UTC timezone.
+- Storing work orders for a nationwide company, taking into account the
+  timezones of each store.
 
 ## Resources
 
